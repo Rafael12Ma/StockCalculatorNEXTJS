@@ -14,6 +14,10 @@ export default async function StockDetails({ params }) {
   const stocks = dummyStocks;
   const stock = stocks.find((stock) => stock.slug === slug);
 
+  if (!stock) {
+    return <p>Stock not found</p>;
+  }
+
   let a;
   let precent;
 
