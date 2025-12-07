@@ -1,0 +1,27 @@
+.add {
+  background-color: rgb(23, 23, 67);
+  font-size: 3rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  width: 5%;
+  height: 4rem;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.link {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
+
+.add:hover {
+  background-color: rgb(100, 100, 223);
+  color: black;
+}

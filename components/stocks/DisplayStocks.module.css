@@ -1,0 +1,55 @@
+.stocksGrid {
+  background-color: #2b3531;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.stockCard {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stockCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+}
+.stockCard:active {
+  width: 110%;
+}
+
+.name {
+  color: white;
+}
+
+.stockImage {
+  padding-top: 10px;
+  border-radius: 10%;
+  margin: auto;
+  width: 12rem;
+  height: 18rem;
+  max-height: 200px; /* optional limit */
+  object-fit: contain; /* show full image */
+  background-color: #f8f8f8; /* subtle background if transparent */
+  border-bottom: 1px solid #ddd;
+}
+
+.stockInfo {
+  padding: 1rem;
+}
+
+.stockInfo h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}

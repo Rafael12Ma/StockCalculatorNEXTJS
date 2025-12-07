@@ -1,0 +1,39 @@
+.inputTasks {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.inputTasks button:active {
+  background-color: #0dffc7;
+}
+.inputTasks button {
+  justify-content: flex-end;
+  width: 40px;
+  height: 30px;
+  border-radius: 20%;
+  margin: 10px;
+  font-size: 1rem;
+}
+.inputTasks button:hover {
+  background-color: #303b37;
+  cursor: pointer;
+}
+
+.inputTasks label {
+  color: red;
+}
+.inputTasks input {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.inputTasks input:focus {
+  background-color: rgba(255, 255, 255, 0.468);
+}
+.stocksList ul {
+  list-style-type: none;
+}
+
+.stocksList h2 {
+  color: #0dffc7;
+}
