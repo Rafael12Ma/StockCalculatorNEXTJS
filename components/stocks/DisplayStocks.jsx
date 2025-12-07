@@ -1,12 +1,12 @@
 import Image from "next/image";
 import classes from "./DisplayStocks.module.css";
-import { getStocks } from "@/lib/stocks";
+// import { getStocks } from "@/lib/stocks";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 
 export default async function DisplayStocks() {
-  const stocks = await getStocks();
-  // const stocks = dummyStocks;
+  // const stocks = await getStocks();
+  const stocks = dummyStocks;
   if (!stocks) {
     notFound();
   }
