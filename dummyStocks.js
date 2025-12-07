@@ -13,28 +13,28 @@ const dummyStocks = [
         currValue: '320',
         boughtValue: '58',
         quantity: "3.35",
-        image: "/images/Calestica.png"
+        image: "/images/calestica.png"
     }, {
         stockName: 'Nvidia',
         slug: 'nvidia',
         currValue: '185',
         boughtValue: '110',
         quantity: "2",
-        image: "/images/Nvidia.png"
+        image: "/images/nvidia.png"
     }, {
         stockName: 'Amazon',
         slug: 'amazon',
         currValue: '260',
         boughtValue: '322',
         quantity: "0.514",
-        image: "/images/Amazon.png"
+        image: "/images/amazon.png"
     }, {
         stockName: 'Tesla',
         slug: 'tesla',
         currValue: '420',
         boughtValue: '350',
         quantity: "0",
-        image: "/images/Tesla.png"
+        image: "/images/tesla.png"
     }
 ];
 export default dummyStocks
