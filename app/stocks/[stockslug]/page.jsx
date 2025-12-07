@@ -106,10 +106,5 @@ export default async function StockDetails({ params }) {
     );
   }
 
-  return (
-    <>
-      <p>Version 7/12/2025 22:32</p>
-      {content}
-    </>
-  );
+  return <>{content}</>;
 }
