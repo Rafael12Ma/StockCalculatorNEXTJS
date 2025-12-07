@@ -3,6 +3,7 @@ import classes from "./DisplayStocks.module.css";
 // import { getStocks } from "@/lib/stocks";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import dummyStocks from "@/dummyStocks";
 
 export default async function DisplayStocks() {
   // const stocks = await getStocks();
