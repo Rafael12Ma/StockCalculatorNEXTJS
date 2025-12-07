@@ -1,4 +1,4 @@
-import { getStock } from "@/lib/stocks";
+import { getStock, getStocks } from "@/lib/stocks";
 import classes from "./page.module.css";
 import { FaEuroSign, FaArrowDown, FaArrowUp } from "react-icons/fa";
 import Link from "next/link";
@@ -8,7 +8,9 @@ export default async function StockDetails({ params }) {
   const resolvedParams = await params;
   const slug = resolvedParams.stockslug;
 
-  const stock = await getStock(slug);
+  // const stock = await getStock(slug);
+  const stocks = await getStocks();
+  const stock = stocks.find((stock) => stock.slug === slug);
 
   let a;
   let precent;
