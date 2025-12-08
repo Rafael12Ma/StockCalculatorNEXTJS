@@ -5,7 +5,7 @@ import Link from "next/link";
 import { RiDeleteBinFill } from "react-icons/ri";
 import dummyStocks from "@/dummyStocks";
 import Image from "next/image";
-import logo from "../../../public/images/Apple.png";
+// import logo from "../../../public/images/Apple.png";
 
 // export const dynamic = "force-dynamic";
 
