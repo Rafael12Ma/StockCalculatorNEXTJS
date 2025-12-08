@@ -1,7 +1,10 @@
 import NewStockLink from "@/components/stocks/AddStock";
 import DisplayStocks from "@/components/stocks/DisplayStocks";
 
-// export const dynamic = "force-dynamic";
+export const metadata = {
+  title: "My stocks",
+  description: "View my personall stocks",
+};
 
 export default function StocksPage() {
   return (
