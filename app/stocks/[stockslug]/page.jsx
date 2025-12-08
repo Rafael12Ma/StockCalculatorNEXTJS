@@ -4,6 +4,8 @@ import { FaEuroSign, FaArrowDown, FaArrowUp } from "react-icons/fa";
 import Link from "next/link";
 import { RiDeleteBinFill } from "react-icons/ri";
 import dummyStocks from "@/dummyStocks";
+import Image from "next/image";
+import logo from "../../../public/images/Apple.png";
 
 // export const dynamic = "force-dynamic";
 
@@ -52,8 +54,9 @@ export default async function StockDetails({ params }) {
           </Link>{" "}
           <hr className={classes.hr} />
           <div className={classes.header}>
-            //{" "}
-            <img
+            <Image
+              width={100}
+              height={100}
               src={stock.image}
               alt={stock.stockName}
               className={classes.image}
