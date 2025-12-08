@@ -9,6 +9,20 @@ import Image from "next/image";
 
 // export const dynamic = "force-dynamic";
 
+export async function generateMetadata({ params }) {
+  const resolvedParams = await params;
+  const slug = resolvedParams.stockslug;
+  return {
+    title: `Stock : ${slug}`,
+    description: `${slug} details card`,
+  };
+}
+
+// export const metadata = {
+//   title: "Stock Details",
+//   description: "Stocks details card",
+// };
+
 export default async function StockDetails({ params }) {
   const resolvedParams = await params;
   const slug = resolvedParams.stockslug;
