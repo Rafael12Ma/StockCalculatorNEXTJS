@@ -5,13 +5,16 @@ import Link from "next/link";
 import { RiDeleteBinFill } from "react-icons/ri";
 import dummyStocks from "@/dummyStocks";
 
+// export const dynamic = "force-dynamic";
+
 export default async function StockDetails({ params }) {
   const resolvedParams = await params;
   const slug = resolvedParams.stockslug;
 
   // const stock = await getStock(slug);
-  // const stocks = await getStocks();
-  const stocks = dummyStocks;
+  const stocks = await getStocks();
+  // const stocks = dummyStocks;
+  console.log(stocks);
   const stock = stocks.find((stock) => stock.slug === slug);
 
   if (!stock) {

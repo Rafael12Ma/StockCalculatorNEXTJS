@@ -1,4 +1,5 @@
 import sql from "better-sqlite3";
+import { revalidatePath } from "next/cache";
 
 const db = sql("stocks.db");
 
@@ -20,7 +21,7 @@ export async function storeStock(stock) {
     INSERT INTO stocks (stockName, currValue, boughtValue, quantity,slug,image)
     VALUES (?, ?, ?, ?,?,?)`);
   await new Promise((resolve) => setTimeout(resolve, 1000));
-  return stmt.run(
+  await stmt.run(
     stock.stockName,
     stock.currValue,
     stock.boughtValue,
@@ -28,4 +29,5 @@ export async function storeStock(stock) {
     stock.slug,
     stock.image
   );
+  revalidatePath("/", "layout");
 }

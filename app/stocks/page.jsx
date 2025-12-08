@@ -1,6 +1,8 @@
 import NewStockLink from "@/components/stocks/AddStock";
 import DisplayStocks from "@/components/stocks/DisplayStocks";
 
+// export const dynamic = "force-dynamic";
+
 export default function StocksPage() {
   return (
     <>

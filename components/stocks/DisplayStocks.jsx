@@ -4,13 +4,15 @@ import classes from "./DisplayStocks.module.css";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import dummyStocks from "@/dummyStocks";
+import { getStocks } from "@/lib/stocks";
 
 export default async function DisplayStocks() {
-  // const stocks = await getStocks();
-  const stocks = dummyStocks;
+  const stocks = await getStocks();
+  // const stocks = dummyStocks;
   if (!stocks) {
     notFound();
   }
+
   return (
     <>
       <ul className={classes.stocksGrid}>
