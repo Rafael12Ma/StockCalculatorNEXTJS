@@ -50,7 +50,7 @@ export default async function StockDetails({ params }) {
       <div className={classes.container}>
         <div className={classes.card}>
           <Link href="/stocks">
-            <button className={classes.back}>← Back to Stocks</button>
+            <button className={classes.back}> ← Back to Stocks</button>
           </Link>{" "}
           <hr className={classes.hr} />
           <div className={classes.header}>
