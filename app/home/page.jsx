@@ -5,7 +5,6 @@ import imagelogo from "./image.png";
 import Stocks from "../../components/home/Stocks";
 import NewTask from "../../components/home/NewTask";
 import classes from "./page.module.css";
-import Image from "next/image";
 
 export default function Header() {
   const refStock = useRef();
@@ -43,13 +42,7 @@ export default function Header() {
   return (
     <header className={classes.header}>
       <h1 className={classes.h1}>Stock Analyticsss</h1>
-      <Image
-        width="60"
-        height="60"
-        className={classes.image1}
-        src={imagelogo}
-        alt="Stock market"
-      />
+      <img className={classes.image1} src={imagelogo.src} alt="Stock market" />
       <NewTask
         refStock={refStock}
         refPrice={refPrice}

@@ -42,5 +42,5 @@ export async function createStock(prevState, formData) {
   } catch (err) {
     return { errors: ["Database error: " + err.message] };
   }
-  redirect("stocks");
+  redirect("/stocks");
 }

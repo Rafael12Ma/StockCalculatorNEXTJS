@@ -26,7 +26,7 @@ export default function MainNavigationBar() {
         <Link href="/">
           <div id="auth-header">
             <form action={logout}>
-              <button>Logout</button>
+              <button type="submit">Logout</button>
             </form>
           </div>
         </Link>

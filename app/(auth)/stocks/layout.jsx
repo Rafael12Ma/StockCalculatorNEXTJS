@@ -1,4 +1,3 @@
-import { logout } from "@/actions/auth-actions";
 import "../../../app/globals.css";
 
 export const metadata = {

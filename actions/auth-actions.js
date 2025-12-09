@@ -1,7 +1,7 @@
 'use server'
 
 
-import { createAuthSession, destroySession, verifyAuth } from "@/lib/auth"
+import { createAuthSession, destroySession } from "@/lib/auth"
 import { hashUserPassword, verifyPassword } from "@/lib/hash"
 import { createUser, getUserByEmail } from "@/lib/user"
 import { redirect } from "next/navigation"
@@ -28,19 +28,7 @@ export async function signup(prevState, formData) {
         }
     }
 
-    // let errors = []
 
-    // if (!email.includes("@")) {
-    //     errors.push("Enter a valid email")
-    // }
-
-    // if (password.trim().length < 8) {
-    //     errors.push("Password must be at least 8 characters long")
-    // }
-
-    // if (errors.length > 0) {
-    //     return { errors }
-    // }
     const hashedPassword = hashUserPassword(password)
 
     try {

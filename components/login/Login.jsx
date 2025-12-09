@@ -5,7 +5,6 @@ import { auth } from "@/actions/auth-actions";
 import Link from "next/link";
 import ButtonSubmit from "./ButtonSubmit";
 import { useActionState } from "react";
-
 export default function Login({ mode }) {
   const [state, formAction] = useActionState(auth.bind(null, mode), {});
 
