@@ -1,22 +1,15 @@
-"use client";
-
 import NewStockLink from "@/components/stocks/AddStock";
 import DisplayStocks from "@/components/stocks/DisplayStocks";
-import { useEffect, useState } from "react";
+import { updateTime } from "../time/UpdateTime";
 
 export default function StocksClient() {
-  const [date, setDate] = useState(new Date());
-
-  useEffect(() => {
-    const interval = setInterval(() => setDate(new Date()), 1000);
-    return () => clearInterval(interval);
-  }, []);
+  const date = updateTime();
 
   return (
     <main>
       <p>
-        Version: {date.toLocaleDateString()} {date.getHours()}:
-        {date.getMinutes()}:{date.getSeconds()}
+        Version : {date.localTime}___{date.hours}:{date.minutes}'':
+        {date.seconds}''{" "}
       </p>
       <h1>My Stocks</h1>
       <NewStockLink />

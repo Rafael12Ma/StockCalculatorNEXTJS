@@ -1,3 +1,4 @@
+"use server";
 import sql from "better-sqlite3";
 import { revalidatePath } from "next/cache";
 

@@ -1,7 +1,4 @@
-import NewStockLink from "@/components/stocks/AddStock";
-import DisplayStocks from "@/components/stocks/DisplayStocks";
 import StocksClient from "@/components/stocks/StockClient";
-import { updateTime } from "@/components/time/UpdateTime";
 import { verifyAuth } from "@/lib/auth";
 import { redirect } from "next/navigation";
 
