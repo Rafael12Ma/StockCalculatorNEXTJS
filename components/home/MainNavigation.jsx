@@ -23,13 +23,11 @@ export default function MainNavigationBar() {
         >
           Portfolio
         </Link>
-        <Link href="/">
-          <div id="auth-header">
-            <form action={logout}>
-              <button type="submit">Logout</button>
-            </form>
-          </div>
-        </Link>
+        <form action={logout}>
+          <button type="submit" className={classes.navlink}>
+            Logout
+          </button>
+        </form>
       </nav>
     </>
   );
