@@ -4,6 +4,7 @@ import Link from "next/link";
 import classes from "./MainNavigation.module.css";
 import { usePathname } from "next/navigation";
 import { logout } from "@/actions/auth-actions";
+import { motion } from "framer-motion";
 
 export default function MainNavigationBar() {
   const path = usePathname();
@@ -23,11 +24,17 @@ export default function MainNavigationBar() {
         >
           Portfolio
         </Link>
-        <form action={logout}>
-          <button type="submit" className={classes.navlink}>
-            Logout
-          </button>
-        </form>
+        <motion.div
+          whileHover={{ rotate: 0 }}
+          animate={{ rotate: 30 }}
+          id="auth-header"
+        >
+          <form action={logout}>
+            <button type="submit" className={classes.navlink}>
+              Logout
+            </button>
+          </form>
+        </motion.div>
       </nav>
     </>
   );

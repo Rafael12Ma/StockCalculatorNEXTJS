@@ -5,6 +5,8 @@ import { auth } from "@/actions/auth-actions";
 import Link from "next/link";
 import ButtonSubmit from "./ButtonSubmit";
 import { useActionState } from "react";
+import { motion } from "framer-motion";
+
 export default function Login({ mode }) {
   const [state, formAction] = useActionState(auth.bind(null, mode), {});
 
@@ -33,7 +35,14 @@ export default function Login({ mode }) {
                 ))}{" "}
               </ul>
             )}
-            <p>
+            <motion.p
+              whileHover={{ scale: 1.2 }}
+              animate={{ scale: 1 }}
+              transition={{
+                duration: 0.1,
+                ease: "easeInOut",
+              }}
+            >
               {mode === "login" && (
                 <Link href="/?mode=signup" className={classes.mode}>
                   Create an account
@@ -44,7 +53,7 @@ export default function Login({ mode }) {
                   Login with existing account
                 </Link>
               )}{" "}
-            </p>
+            </motion.p>
           </div>
         </form>
       </div>
