@@ -3,13 +3,17 @@
 import Link from "next/link";
 import classes from "./MainNavigation.module.css";
 import { usePathname } from "next/navigation";
+import { logout } from "@/actions/auth-actions";
 
 export default function MainNavigationBar() {
   const path = usePathname();
   return (
     <>
       <nav className={classes.navbar}>
-        <Link href="/" className={path === "/" ? classes.active : undefined}>
+        <Link
+          href="/home"
+          className={path === "/home" ? classes.active : undefined}
+        >
           Home
         </Link>
 
@@ -18,6 +22,13 @@ export default function MainNavigationBar() {
           className={path === "/stocks" ? classes.active : undefined}
         >
           Portfolio
+        </Link>
+        <Link href="/">
+          <div id="auth-header">
+            <form action={logout}>
+              <button>Logout</button>
+            </form>
+          </div>
         </Link>
       </nav>
     </>

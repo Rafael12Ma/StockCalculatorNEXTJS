@@ -2,9 +2,6 @@
 const nextConfig = {
   /* config options here */
   reactCompiler: true,
-  experimental: {
-    serverComponentsExternalPackages: ["better-sqlite3"],
-  },
 };
 
 export default nextConfig;

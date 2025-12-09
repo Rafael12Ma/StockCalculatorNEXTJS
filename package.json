@@ -9,8 +9,10 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@lucia-auth/adapter-sqlite": "^3.0.2",
     "axios": "^1.13.2",
-    "better-sqlite3": "^12.5.0",
+    "better-sqlite3": "^11.10.0",
+    "lucia": "^3.2.2",
     "mongoose": "^9.0.1",
     "next": "16.0.7",
     "react": "19.2.0",

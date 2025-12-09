@@ -30,8 +30,8 @@ export default async function StockDetails({ params }) {
   // const stock = await getStock(slug);
   const stocks = await getStocks();
   // const stocks = dummyStocks;
-  console.log(stocks);
   const stock = stocks.find((stock) => stock.slug === slug);
+  console.log(stock);
 
   if (!stock) {
     return <p>Stock not found</p>;

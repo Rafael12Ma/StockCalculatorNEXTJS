@@ -1,0 +1,78 @@
+/* Center the whole page content */
+.pageWrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1a2b2b;
+}
+
+/* Form Container */
+.SignUpForm {
+  width: 90%;
+  max-width: 30rem;
+  padding: 2rem;
+  background: linear-gradient(180deg, #253c3c, #1d4949);
+  border-radius: 8px;
+  box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 15rem;
+}
+
+/* Centered title */
+.SignUpForm h2 {
+  text-align: center;
+  color: #e2eef2;
+  margin-bottom: 1rem;
+}
+
+/* Controls */
+.control {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.control label {
+  font-size: 0.8rem;
+  color: #9bafaf;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.control input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #758a8a;
+  background-color: #869999;
+  color: #142020;
+}
+
+.formActions {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+
+/* Button styling */
+
+.formErrors {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #a21d4c;
+}
+
+.mode {
+  opacity: 0.5;
+}
