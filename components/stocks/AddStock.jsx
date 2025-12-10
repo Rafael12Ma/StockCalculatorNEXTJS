@@ -5,7 +5,7 @@ import { IoMdAdd } from "react-icons/io";
 export default function NewStockLink() {
   return (
     <h1>
-      <Link className={classes.link} href="/new">
+      <Link className={classes.link} href="/stocks/new">
         <button className={classes.add}>
           <IoMdAdd />
         </button>

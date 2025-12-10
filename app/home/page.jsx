@@ -7,5 +7,6 @@ export default async function Header() {
   if (!result.user) {
     return redirect("/");
   }
+  
   return <HeaderHelper />;
 }
