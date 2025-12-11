@@ -11,7 +11,7 @@ export default function StocksClient() {
         Version : {date.localTime}___{date.hours}:{date.minutes}'':
         {date.seconds}''{" "}
       </p>
-      <h1>My Stocks</h1>
+      <h1>My Stocks!</h1>
       <NewStockLink />
       <DisplayStocks />
     </main>
