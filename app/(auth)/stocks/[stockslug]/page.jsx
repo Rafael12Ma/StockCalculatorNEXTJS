@@ -13,15 +13,10 @@ export async function generateMetadata({ params }) {
   const resolvedParams = await params;
   const slug = resolvedParams.stockslug;
   return {
-    title: `Stock : ${slug}`,
+    title: `${slug}`,
     description: `${slug} details card`,
   };
 }
-
-// export const metadata = {
-//   title: "Stock Details",
-//   description: "Stocks details card",
-// };
 
 export default async function StockDetails({ params }) {
   const resolvedParams = await params;

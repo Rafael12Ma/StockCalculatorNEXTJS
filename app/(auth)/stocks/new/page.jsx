@@ -8,9 +8,9 @@ export default async function AddStock() {
     return redirect("/");
   }
   return (
-    <>
+    <main style={{ backgroundColor: "#1a2b2b" }}>
       <h1>Add a new stock!</h1>
       <StockForm />
-    </>
+    </main>
   );
 }

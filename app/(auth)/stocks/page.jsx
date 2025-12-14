@@ -1,6 +1,8 @@
 import StocksClient from "@/components/stocks/StockClient";
 import { verifyAuth } from "@/lib/auth";
 import { redirect } from "next/navigation";
+import classes from "./page.module.css";
+import { Suspense } from "react";
 
 export const metadata = {
   title: "My stocks",
@@ -14,8 +16,8 @@ export default async function StocksPage() {
   }
 
   return (
-    <>
+    <main className={classes.main}>
       <StocksClient />
-    </>
+    </main>
   );
 }

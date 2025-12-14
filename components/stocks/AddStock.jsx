@@ -4,12 +4,12 @@ import { IoMdAdd } from "react-icons/io";
 
 export default function NewStockLink() {
   return (
-    <h1>
+    <main className={classes.main}>
       <Link className={classes.link} href="/stocks/new">
         <button className={classes.add}>
           <IoMdAdd />
         </button>
       </Link>
-    </h1>
+    </main>
   );
 }

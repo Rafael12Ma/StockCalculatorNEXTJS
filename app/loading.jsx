@@ -1,7 +1,7 @@
 export default function RootLoading() {
   return (
     <>
-      <p style={{ textAlign: "center" }}>Loading...</p>
+      <p className="loading">Loading...</p>
     </>
   );
 }

@@ -1,5 +1,5 @@
 .stocksGrid {
-  background-color: #2b3531;
+  background-color: #1a2b2b;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;

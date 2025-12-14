@@ -1,7 +1,7 @@
 export default function LoadingStock() {
   return (
-    <>
-      <p style={{ textAlign: "center" }}>Loading Stock...</p>
-    </>
+    <main style={{ textAlign: "center" }}>
+      <p>Loading...</p>
+    </main>
   );
 }
