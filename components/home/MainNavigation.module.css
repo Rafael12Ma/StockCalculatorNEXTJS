@@ -41,3 +41,13 @@
   cursor: pointer;
   padding: 0;
 }
+
+.themeButton {
+  color: white;
+  background-color: #111;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-size: large;
+  padding: 1rem;
+  cursor: pointer;
+}

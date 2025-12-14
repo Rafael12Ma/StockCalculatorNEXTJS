@@ -26,15 +26,13 @@ export async function generateMetadata({ params }) {
 export default async function StockDetails({ params }) {
   const resolvedParams = await params;
   const slug = resolvedParams.stockslug;
-
-  // const stock = await getStock(slug);
   const stocks = await getStocks();
   // const stocks = dummyStocks;
   const stock = stocks.find((stock) => stock.slug === slug);
   console.log(stock);
 
   if (!stock) {
-    return <p>Stock not found</p>;
+    return <p style={{ textAlign: "center", margin: 20 }}>Stock not found</p>;
   }
 
   let a;

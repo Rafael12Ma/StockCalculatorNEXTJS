@@ -5,8 +5,10 @@ import classes from "./MainNavigation.module.css";
 import { usePathname } from "next/navigation";
 import { logout } from "@/actions/auth-actions";
 import { motion } from "framer-motion";
+import { useTheme } from "@/zustand/theme";
 
 export default function MainNavigationBar() {
+  const { theme, toggleThemes } = useTheme();
   const path = usePathname();
   return (
     <>
@@ -35,6 +37,9 @@ export default function MainNavigationBar() {
             </button>
           </form>
         </motion.div>
+        <button className={classes.themeButton} onClick={toggleThemes}>
+          {theme === "light" ? "Dark" : "Light "}
+        </button>
       </nav>
     </>
   );
