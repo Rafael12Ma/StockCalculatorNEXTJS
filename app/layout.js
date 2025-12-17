@@ -1,6 +1,6 @@
 import "./globals.css";
 import MainNavigationBar from "@/components/home/MainNavigation";
-
+import { Toaster } from "react-hot-toast"
 
 
 export const metadata = {
@@ -13,6 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <MainNavigationBar />
+        <Toaster />
         {children}
       </body>
     </html>

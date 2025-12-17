@@ -3,7 +3,6 @@
 import { useRef, useState } from "react";
 import NewTask from "../NewTask";
 import Stocks from "../Stocks";
-import classes from "./headerHelper.module.css";
 import imagelogo from "../../../app/home/image.png";
 
 export default function HeaderHelper() {
@@ -40,10 +39,10 @@ export default function HeaderHelper() {
   }
   return (
     <>
-      <header className={classes.header}>
-        <h1 className={classes.h1}>Stock Analyticsss</h1>
+      <header className="flex items-center justify-center flex-col gap-">
+        <h1>Stock Analyticsss</h1>
         <img
-          className={classes.image1}
+          className="flex justify-center items-center"
           src={imagelogo.src}
           alt="Stock market"
         />

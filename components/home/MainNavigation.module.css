@@ -21,11 +21,16 @@
 }
 
 /* Hover Effect */
-.navbar a:hover {
+.navbar a:hover,
+.theme:hover {
   color: #ff8a05;
   transform: scale(1.1);
 }
-
+.theme {
+  font-size: 2rem;
+  cursor: pointer;
+  display: flex;
+}
 .active {
   background: linear-gradient(90deg, #ff8a05, #f9b331);
   background-clip: text;
@@ -42,7 +47,20 @@
   padding: 0;
 }
 
-.themeButton {
+.lightmode {
+  color: white;
+  background-color: rgb(44, 43, 44);
+  border-radius: 1rem;
+  font-weight: 600;
+  font-size: large;
+  padding: 1rem;
+  cursor: pointer;
+}
+.lightmode:hover {
+  background-color: black;
+  color: #fff;
+}
+.darkmode {
   color: white;
   background-color: #111;
   border-radius: 1rem;
@@ -50,4 +68,9 @@
   font-size: large;
   padding: 1rem;
   cursor: pointer;
+}
+
+.darkmode:hover {
+  background-color: white;
+  color: #000;
 }

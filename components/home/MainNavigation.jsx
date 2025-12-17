@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 import { logout } from "@/actions/auth-actions";
 import { motion } from "framer-motion";
 import { useTheme } from "@/zustand/theme";
+import { MdDarkMode } from "react-icons/md";
+import { CiLight } from "react-icons/ci";
 
 export default function MainNavigationBar() {
   const { theme, toggleThemes } = useTheme();
@@ -19,7 +21,6 @@ export default function MainNavigationBar() {
         >
           Home
         </Link>
-
         <Link
           href="/stocks"
           className={path === "/stocks" ? classes.active : undefined}
@@ -37,9 +38,9 @@ export default function MainNavigationBar() {
             </button>
           </form>
         </motion.div>
-        <button className={classes.themeButton} onClick={toggleThemes}>
-          {theme === "light" ? "Dark" : "Light "}
-        </button>
+        <div className={classes.theme} onClick={toggleThemes}>
+          {theme === "light" ? <CiLight /> : <MdDarkMode />}
+        </div>{" "}
       </nav>
     </>
   );
