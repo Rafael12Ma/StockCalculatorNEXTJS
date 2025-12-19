@@ -29,8 +29,6 @@ export default async function Header() {
         ]}
       />
       <SearchStock />
-      {/* <HeaderHelper /> */}
-      {/* <FormPage /> */}
     </>
   );
 }

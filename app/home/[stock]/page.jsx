@@ -59,7 +59,7 @@ export default function DetailsStockPage() {
   }, [symbol]);
 
   const stock = prices[symbol] || {};
-  const progress = absolute(stock.current, stock.open);
+  const progress = absolute(stock.open, stock.current);
   const profit = progress > 0 ? true : false;
   //
   return (
@@ -107,7 +107,7 @@ export default function DetailsStockPage() {
                       profit ? "text-green-500" : "text-red-500"
                     }`}
                   >
-                    {percent(stock.current, stock.open)}% $
+                    {percent(stock.open, stock.current)}%
                   </p>
                 </div>
                 <div className="flex justify-between">

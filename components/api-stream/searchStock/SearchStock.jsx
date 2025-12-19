@@ -112,7 +112,7 @@ export default function SearchStock() {
             name="search"
             type="text"
             placeholder="e.g NVDA"
-            autoFocus
+            // autoFocus
             required
             maxLength={4}
           />
