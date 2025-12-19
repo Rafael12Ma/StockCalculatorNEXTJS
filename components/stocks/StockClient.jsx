@@ -9,7 +9,7 @@ export default function StocksClient() {
   const date = updateTime();
 
   return (
-    <main className={classes.main}>
+    <main className="flex flex-col">
       <p style={{ textAlign: "right" }}>
         Version : {date.localTime}___{date.hours}:{date.minutes}'':
         {date.seconds}''{" "}

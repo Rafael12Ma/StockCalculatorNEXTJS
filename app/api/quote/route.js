@@ -17,7 +17,7 @@ export async function GET(request) {
   );
 
   const data = await res.json();
-
+  // console.log(data)
   const percentFromOpen =
     data.o && data.c
       ? ((data.c - data.o) / data.o) * 100
@@ -27,6 +27,8 @@ export async function GET(request) {
     symbol,
     open: data.o,
     current: data.c,
+    hightPrice: data.h,
+    lowPrice: data.l,
     percentFromOpen
   });
 }
