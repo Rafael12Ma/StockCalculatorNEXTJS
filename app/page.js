@@ -1,4 +1,5 @@
 import Login from "@/components/login/Login";
+import Header from "./home/page";
 
 
 
@@ -8,7 +9,8 @@ export default async function HomePage({ searchParams }) {
 
   return (
     <div>
-      <Login mode={formMode} />
+      {/* <Login mode={formMode} /> */}
+      <Header />
     </div>
   );
 }

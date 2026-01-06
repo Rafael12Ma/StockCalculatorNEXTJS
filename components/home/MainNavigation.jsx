@@ -8,10 +8,16 @@ import { motion } from "framer-motion";
 import { useTheme } from "@/zustand/theme";
 import { MdDarkMode } from "react-icons/md";
 import { CiLight } from "react-icons/ci";
+import toast from "react-hot-toast";
 
 export default function MainNavigationBar() {
   const { theme, toggleThemes } = useTheme();
   const path = usePathname();
+
+  function handleStatus() {
+    toast.success("Log out successfullyy!");
+  }
+
   return (
     <>
       <nav className={classes.navbar}>
@@ -33,7 +39,11 @@ export default function MainNavigationBar() {
           id="auth-header"
         >
           <form action={logout}>
-            <button type="submit" className={classes.navlink}>
+            <button
+              onClick={handleStatus}
+              type="submit"
+              className={classes.navlink}
+            >
               Logout
             </button>
           </form>

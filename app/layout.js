@@ -1,6 +1,7 @@
 import "./globals.css";
 import MainNavigationBar from "@/components/home/MainNavigation";
 import { Toaster } from "react-hot-toast"
+import { QueryProvider } from "@/query/query-provider";
 
 
 export const metadata = {
@@ -14,7 +15,9 @@ export default function RootLayout({ children }) {
       <body>
         <MainNavigationBar />
         <Toaster />
-        {children}
+        <QueryProvider>
+          {children}
+        </QueryProvider>
       </body>
     </html>
   );

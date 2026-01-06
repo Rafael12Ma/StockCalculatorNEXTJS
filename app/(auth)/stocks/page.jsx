@@ -9,10 +9,10 @@ export const metadata = {
 };
 
 export default async function StocksPage() {
-  const result = await verifyAuth();
-  if (!result.user) {
-    return redirect("/");
-  }
+  // const result = await verifyAuth();
+  // if (!result.user) {
+  //   return redirect("/");
+  // }
 
   return (
     <main className="m-40 p-5 flex flex-col gap-20">

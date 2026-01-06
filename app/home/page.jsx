@@ -6,10 +6,10 @@ import FormPage from "@/components/api-stream/form/Form";
 import SearchStock from "@/components/api-stream/searchStock/SearchStock";
 
 export default async function Header() {
-  const result = await verifyAuth();
-  if (!result.user) {
-    return redirect("/");
-  }
+  // const result = await verifyAuth();
+  // if (!result.user) {
+  //   return redirect("/");
+  // }
 
   return (
     <>
