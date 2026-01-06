@@ -4,8 +4,8 @@ import Header from "./home/page";
 
 
 export default async function HomePage({ searchParams }) {
-  const params = await searchParams
-  const formMode = params?.mode || "login"
+  // const params = await searchParams
+  // const formMode = params?.mode || "login"
 
   return (
     <div>

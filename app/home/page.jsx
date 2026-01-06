@@ -1,8 +1,4 @@
-import { verifyAuth } from "@/lib/auth";
-import HeaderHelper from "@/components/home/second/headerHelper";
-import { redirect } from "next/navigation";
 import StockTicker from "@/components/api-stream/StockTicker";
-import FormPage from "@/components/api-stream/form/Form";
 import SearchStock from "@/components/api-stream/searchStock/SearchStock";
 
 export default async function Header() {
