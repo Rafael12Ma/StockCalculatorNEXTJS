@@ -21,11 +21,11 @@ export default function Login() {
     <>
       <div className="flex drop-shadow-black flex-col bg-black p-2 border-2 rounded-t-2xl sm:mx-20 md:mx-45 lg:mx-80 xl:mx-120 2xl:mx-145 3xl:mx-140 my-20 mx-15 justify-center items-center">
         <h1 className="font-bold text-xl">Log in</h1>
-        <hr className="bg-amber-500 w-full opacity-20" />
+        <hr className="bg-amber-500 w-full m-1 opacity-20" />
         <div className="flex gap-10">
           <div className="flex flex-col justify-center items-center">
             <button
-              className="bg-black flex flex-col justify-center items-center gap-3 opacity-50 hover:text-red-500 cursor-pointer rounded-2xl p-2"
+              className="bg-black flex flex-col justify-center items-center gap-3 opacity-50 hover:scale-105 transition duration200 hover:text-red-500 cursor-pointer rounded-2xl p-2"
               onClick={handleGooglelogin}
             >
               <p>
@@ -37,13 +37,13 @@ export default function Login() {
 
           <div className="flex flex-col justify-center items-center gap-5">
             <button
-              className="bg-black flex flex-col justify-center items-center gap-3 opacity-50 hover:text-red-500 cursor-pointer rounded-2xl p-2"
+              className="bg-black flex flex-col justify-center items-center gap-3 opacity-50 hover:scale-105 transition duration200 hover:text-red-500 cursor-pointer rounded-2xl p-2"
               onClick={handleGithublogin}
             >
               <p>
                 <FaGithub size={30} />
               </p>
-              Log in with github
+              Login with github
             </button>
           </div>
         </div>
