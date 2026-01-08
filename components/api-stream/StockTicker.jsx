@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import { FaArrowUp } from "react-icons/fa6";
 import { FaArrowDown } from "react-icons/fa6";
 import Link from "next/link";
-import { percent } from "./calculations";
 import { absolute } from "./calculations";
+import { percent } from './calculations';
 
 export default function StockTicker({ symbols }) {
   const [prices, setPrices] = useState({});
@@ -69,7 +69,7 @@ export default function StockTicker({ symbols }) {
         const isUp = pct > 0;
 
         return (
-          <Link key={symbol} href={`/home/${symbol}`}>
+          <Link key={symbol} href={`/${symbol}`}>
             <li className="bg-white rounded-2xl cursor-pointer p-5 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
               <div className="flex flex-col gap-3">
                 {/* Symbol */}

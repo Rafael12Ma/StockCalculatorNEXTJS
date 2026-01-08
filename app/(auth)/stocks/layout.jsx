@@ -1,8 +1,8 @@
 import "../../../app/globals.css";
 
 export const metadata = {
-  title: "Next Auth",
-  description: "Next.js Authentication",
+  title: "Portfolio | Stock Calculator",
+  description: "View my personall stocks",
 };
 
 export default function AuthRootLayout({ children }) {

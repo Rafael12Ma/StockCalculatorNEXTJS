@@ -1,13 +1,18 @@
 "use client";
 
-import { absolute } from "@/components/api-stream/calculations";
-import { percent } from "../../../components/api-stream/calculations";
+import { absolute, percent } from "@/components/api-stream/calculations";
+import NoSession from "@/components/home/noSession/NoSession";
+import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import { notFound, useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { IoArrowBackSharp } from "react-icons/io5";
 
 export default function DetailsStockPage() {
+  const { data: session } = authClient.useSession();
+  if (!session) {
+    return <NoSession />;
+  }
   const params = useParams();
   const symbol = params.stock;
   //
@@ -61,6 +66,11 @@ export default function DetailsStockPage() {
   const stock = prices[symbol] || {};
   const progress = absolute(stock.open, stock.current);
   const profit = progress > 0 ? true : false;
+
+  if (!stock) {
+    console.log("stock not found");
+    notFound();
+  }
   //
   return (
     <>
